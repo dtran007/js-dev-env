@@ -1,2 +1,4 @@
 # js-dev-env
-JavaScript Development Environment
+## JavaScript Development Environment
+
+Boilerplate Starter Pack
