@@ -1,0 +1,198 @@
+JavaScript Starter Kit - Boilerplate - JavaScript Development Environment - Seed - Starter Project
+
+Notes:
+
+Add
+.editorconfig
+Tabs vs Spaces
+
+package manager
+npm (most popular) --> alternatives Bower, JSPM, Jam, volo
+
+install Node and npm (use nvm to control Node version)
+package.json file (npm install) --> installs packages into node modules
+
+Security Scanning
+npm has build in security scanning
+retire.js
+npm install -g nsp (install globally)
+(no longer available --> has build in security)
+
+Development Webservers
+http-server
+live-server
+Express
+Webpack dev server
+budo
+
+Using Express
+
+Sharing Work-in-progress
+localtunnel, ngrok, Surge, now
+npm install localtunnel -g
+start app --port 3000
+
+node buildScripts/srcServer.js
+lt --port 3000 (--subdomain anynameyouwant)
+
+browsersync with localtunnel ==> awesome
+
+Automation
+npm Scripts, Grunt, Gulp
+
+npm Scripts delcared in package.json
+-pre/post script naming for prior and after actions
+
+Transpiling
+Babel, TypeScript, Elm
+
+Babel
+configureation styles
+.babelrc, package.json
+
+example:
+var chalk = require('chalk'); //ES5 Pattern
+import chalk from 'chalk //ES6 --> babel-node
+
+Bundler
+npm packages use CommonJS pattern -> node can handle fine
+Browser need bundled packages in format they can handle
+
+Module formats
+IIFE
+Asynchronous Module Definition (AMD)
+CommonJS (CJS)
+Universal Module Definition (UMD)
+ES6 Modules
+
+future applications should use ES6
+-Standardized
+-Statically analyzable
+-Named imports
+
+Select a Bundler (takes JS code and bundles for an environment ie Browser, etc)
+RequireJS (AMD pattern fallen out of favor)
+Browserify (one of the originals)
+Webpack (comprehensive, hot-reloading, also handles more than just JavaScript -> CSS images etc)
+Rollup (Relatively new, Fast, Tree shaking -> eliminates code not using from final bundle)
+JSPM (Uses SystemJS)
+
+Using Webpack -> full featured CSS, Images, Fonts, HTML, Bundle splitting
+
+Linting
+Enforce consistency, Avoid mistakes
+
+JSLint
+JSHint
+ESLint -> most popular
+
+*choose between throwing errors vs warnings
+Plugins
+Presets available
+Tweak according to team feedback
+
+ESLint
+eslint-watch
+
+Testing
+Unit - Single function or module
+Integration - Interactions between modules
+UI - Automate interactions with UI
+
+Unit Testing Frameworks
+Mocha (highly configurable)
+Jasmine (assertion library built in)
+Tape (leanest and minimal configuration)
+QUnit (oldest -> created for JQuery)
+AVA (runs tests in parallel, fast)
+Jest (from facebook -> popular with react developers)
+
+Mocha
+
+Assertion Library (needed when not built in test framework)
+Chai (most popular assertion library)
+
+Helper Library
+JSDOM (simulate the browser's DOM)
+Cheerio (jQuery for the server)
+
+Where to run tests?
+Browser
+-Karma, Testem
+Headless Browser (no visible user interface)
+-PhantomJS
+In-memory DOM
+-JSDOM
+
+Where do test files belong?
+Centralized
+Alongside
+
+Test Plan
+Framework - Mocha
+Assertion Library - Chai
+Helper Library - JDSOM
+Where to run tests - Node
+Where to place tests - Alongside
+When to run tests - Upon Save
+
+Continuous Integration
+CI Server
+Travis (Linux)
+Appveyor (Windows)
+Jenkins
+Circleci
+Semaphore
+SnapCI
+
+Travis + Appveyor
+Mac/Linux/Windows platform coverage
+
+HTTP Calls in JS
+Node -> http, request
+Browser -> XMLHttpRequest (XHR), jQuery, Framework-based eg Angular, Fetch
+Node & Browser -> isomorphic-fetch, xhr, SuperAgent, Axios
+
+Regardless of choice:
+Centralize API calls
+
+Mock HTTP
+Nock
+Static JSON
+Create development webserver
+-api-mock
+-JSON server
+-JSON Schema faker
+
+Generate random data:
+faker.js
+chance.js
+randexp.js
+
+Minification
+
+Error Logging
+TrackJS
+Sentry
+New Relic
+Raygun
+
+Next TODO Prod Build and deployment
+
+Takeaway concepts:
+
+Package Management
+Bundling
+Minification
+Sourcemaps
+Transpiling
+Dynamic HTML Generation
+Centralized HTTP
+Mock API framework
+Component libraries
+Development Webserver
+Linting
+Automated testing
+Continuous Integration
+Automated build
+Automated deployment
